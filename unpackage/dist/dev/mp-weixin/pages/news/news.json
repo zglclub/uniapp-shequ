@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "文章详情页",
-  "usingComponents": {}
+  "usingComponents": {
+    "uni-nav-bar": "/components/uni-ui/uni-nav-bar/uni-nav-bar"
+  }
 }

@@ -30,7 +30,17 @@
 		{
 			"path": "pages/news/news",
 			"style": {
-				"navigationBarTitleText": "文章详情页"
+				"navigationBarTitleText": "NavBar 导航栏",
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false,
+					"bounce": "none",
+					"pullToRefresh": {
+						"style": "circle",
+						"offset": "70px"
+					}
+				}
 			}
 		},
 		{
@@ -44,8 +54,48 @@
 			"style": {
 				"navigationBarTitleText": "个人中心"
 			}
+		},
+		{
+			"path": "pages/search/search",
+			"style": {
+				"navigationBarTitleText": "搜索页面",
+				"app-plus": {
+					"titleNView": {
+						"searchInput": {
+							"align": "center",
+							"backgroundColor": "#F5F4F2",
+							"borderRadius": "6px",
+							"disabled": false,
+							"placeholder": "搜索用户",
+							"placeholderColor": "#6D6C67"
+						},
+						"buttons": [{
+							"color": "#333333",
+							"colorPressed": "#FD597C",
+							"float": "right",
+							"fontSize": "30rpx",
+							"text": "搜索"
+						}]
+					}
+				}
+			}
+		}, 
+{
+			"path": "pages/add-input/add-input",
+			"style": {
+				"navigationBarTitleText": "NavBar 导航栏",
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": true,
+				"app-plus": {
+					"titleNView": false,
+					"bounce": "none",
+					"pullToRefresh": {
+						"style": "circle",
+						"offset": "70px"
+					}
+				}
+			}
 		}
-		
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
@@ -59,26 +109,27 @@
 		"color": "#8F8F94",
 		"selectedColor": "#f33e54",
 		"list": [{
-			"pagePath": "pages/index/index",
-			"iconPath": "static/tabbar/index.png",
-			"selectedIconPath": "static/tabbar/indexed.png",
-			"text": "首页"
-		},
-		{
-			"pagePath": "pages/news/news",
-			"iconPath": "static/tabbar/news.png",
-			"selectedIconPath": "static/tabbar/newsed.png",
-			"text": "资讯"
-		},{
-			"pagePath": "pages/paper/paper",
-			"iconPath": "static/tabbar/paper.png",
-			"selectedIconPath": "static/tabbar/papered.png",
-			"text": "消息"
-		},{
-			"pagePath": "pages/home/home",
-			"iconPath": "static/tabbar/home.png",
-			"selectedIconPath": "static/tabbar/homeed.png",
-			"text": "我的"
-		}]
+				"pagePath": "pages/index/index",
+				"iconPath": "static/tabbar/index.png",
+				"selectedIconPath": "static/tabbar/indexed.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/news/news",
+				"iconPath": "static/tabbar/news.png",
+				"selectedIconPath": "static/tabbar/newsed.png",
+				"text": "动态"
+			}, {
+				"pagePath": "pages/paper/paper",
+				"iconPath": "static/tabbar/paper.png",
+				"selectedIconPath": "static/tabbar/papered.png",
+				"text": "消息"
+			}, {
+				"pagePath": "pages/home/home",
+				"iconPath": "static/tabbar/home.png",
+				"selectedIconPath": "static/tabbar/homeed.png",
+				"text": "我的"
+			}
+		]
 	}
 }

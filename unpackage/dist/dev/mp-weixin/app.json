@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/news/news",
     "pages/paper/paper",
-    "pages/home/home"
+    "pages/home/home",
+    "pages/search/search",
+    "pages/add-input/add-input"
   ],
   "subPackages": [],
   "window": {
@@ -44,5 +46,7 @@
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {
+    "no-thing": "/components/no-thing"
+  }
 }
