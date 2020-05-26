@@ -75,12 +75,10 @@
 								}
 								]
 	import commonList from '@/components/common/common-list.vue';
-	import divider from '@/components/divider.vue';
 	import loadMore from '@/components/common/load-more.vue';
 	export default {
 		components: {
 			commonList,
-			divider,
 			loadMore
 		},
 		data() {
@@ -114,7 +112,7 @@
 			uni.getSystemInfo({
 				success: res => {
 					this.scrollH = res.windowHeight - uni.upx2px(100);
-					console.log(this.scrollH)
+					// console.log(this.scrollH)
 				}
 			}),
 			this.getDate();
@@ -165,7 +163,7 @@
 			},
 			follow(e) {
 				this.newList[0].list[e].isFollow = !this.newList[0].list[e].isFollow;
-				if (this.newList[0].list[e].isFollow) {
+				if (!this.newList[0].list[e].isFollow) {
 					uni.showToast({
 						title: "已取消关注"
 					})

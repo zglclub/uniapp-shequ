@@ -13,11 +13,9 @@
 						<view class="font-small text-light-muted" style="line-height: 1.5;">{{item.newstime}}</view>
 					</view>
 				</view>
-				<view class="flex justify-center align-center rounded text-white bg-main animated" v-if="item.isFollow" @click="follow" style="height:50rpx;width:90rpx;" hover-class="pulse">
+				
+				<view class="flex justify-center align-center rounded text-white bg-main animated" v-if="!item.isFollow" @click="follow" style="height:50rpx;width:90rpx;" hover-class="pulse">
 					未关注
-				</view>
-				<view class="flex justify-center align-center rounded text-white bg-main animated" v-else="item.isFollow" @click="follow" style="height:50rpx;width:90rpx;" hover-class="pulse">
-					已关注
 				</view>
 			</view>
 		</view>

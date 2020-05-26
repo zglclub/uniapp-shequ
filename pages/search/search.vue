@@ -71,7 +71,6 @@
 								}
 								]
 	import commonList from '@/components/common/common-list.vue';
-	//import commonList from '/components/common/common-list.vue';
 	export default {
 		components:{
 			commonList

@@ -96,7 +96,15 @@
 				}
 			}
 		}
-	],
+	    ,{
+            "path" : "components/news/news",
+            "style" : {}
+        }
+        ,{
+            "path" : "components/news/news",
+            "style" : {}
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
