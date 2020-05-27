@@ -10,15 +10,14 @@
 		</uni-nav-bar>
 		<divider></divider>
 		<!-- 关注页	 -->
-			<!-- current 是获取swiper-item索引 -->
-		<swiper class="swiper" :duration="150" 
-		:style="'height:'+scrollH+'px;'" :current="tabIndex" @change="onChangeTab" >
+		<!-- current 是获取swiper-item索引 -->
+		<swiper class="swiper" :duration="150" :style="'height:'+scrollH+'px;'" :current="tabIndex" @change="onChangeTab">
 			<!-- 关注 -->
 
 			<swiper-item>
-				<scroll-view scroll-y="true"  :style="'height:'+scrollH+'px;'"  @scrolltolower="loadmoreEvent()">
+				<scroll-view scroll-y="true" :style="'height:'+scrollH+'px;'" @scrolltolower="loadmoreEvent()">
 					<block v-for="(item2,index2) in newList" :key="index2">
-						<common-list :item="item2" :index="index2"  @doSupport="doSupport"></common-list>
+						<common-list :item="item2" :index="index2" @doSupport="doSupport"></common-list>
 						<divider></divider>
 					</block>
 					<load-more :loadmore="loadMore"></load-more>
@@ -26,7 +25,7 @@
 			</swiper-item>
 			<!-- 话题 -->
 			<swiper-item>
-				<scroll-view scroll-y="true"  :style="'height:'+scrollH+'px;'">
+				<scroll-view scroll-y="true" :style="'height:'+scrollH+'px;'">
 					<!-- 热门分类 -->
 					<hot-cate :hotCate="hotCate" @openMore="openMore"></hot-cate>
 					<!-- 搜索框 -->
@@ -50,6 +49,12 @@
 					</swiper>
 					<divider></divider>
 					<!-- 最近更新 -->
+					<view class="font-md p-2">最近更新</view>
+					<block v-for="(item,index) in topicList" :key="index">
+						<topic-list :item="item" :index="index"></topic-list>
+
+					</block>
+
 				</scroll-view>
 			</swiper-item>
 		</swiper>
@@ -61,6 +66,7 @@
 	import loadMore from '@/components/common/load-more.vue';
 	import hotCate from '@/components/news/hot-cate.vue';
 	import uniSearchBar from '@/components/uni-ui/uni-search-bar/uni-search-bar.vue';
+	import topicList from '@/components/news/topic-list.vue';
 
 	export default {
 		components: {
@@ -68,7 +74,8 @@
 			commonList,
 			loadMore,
 			uniSearchBar,
-			hotCate
+			hotCate,
+			topicList
 		},
 		data() {
 			return {
@@ -85,55 +92,54 @@
 				}, {
 					name: '娱乐',
 				}],
-				loadMore:'上拉加载更多...',
-				newList: [
+				loadMore: '上拉加载更多...',
+				newList: [{
+						username: "昵称1",
+						userpic: "/static/default.jpg",
+						newstime: "2020-05-24 上午 11：31",
+						isFollow: true,
+						title: "这是一个标题",
+						titlepic: "/static/demo/banner2.jpg",
+						support: {
+							type: "support",
+							support_count: 1,
+							unsupport_count: 5
+						},
+						comment_count: 4,
+						share_num: 2
+					},
 					{
-							username: "昵称1",
-							userpic: "/static/default.jpg",
-							newstime: "2020-05-24 上午 11：31",
-							isFollow: true,
-							title: "这是一个标题",
-							titlepic: "/static/demo/banner2.jpg",
-							support: {
-								type: "support",
-								support_count: 1,
-								unsupport_count: 5
-							},
-							comment_count: 4,
-							share_num: 2
+						username: "昵称2",
+						userpic: "/static/default.jpg",
+						newstime: "2020-05-24 上午 11：31",
+						isFollow: true,
+						title: "这是一个标题",
+						titlepic: "",
+						support: {
+							type: "unsupport",
+							support_count: 1,
+							unsupport_count: 5
 						},
-						{
-							username: "昵称2",
-							userpic: "/static/default.jpg",
-							newstime: "2020-05-24 上午 11：31",
-							isFollow: true,
-							title: "这是一个标题",
-							titlepic: "",
-							support: {
-								type: "unsupport",
-								support_count: 1,
-								unsupport_count: 5
-							},
-							comment_count: 4,
-							share_num: 0
+						comment_count: 4,
+						share_num: 0
+					},
+					{
+						username: "昵称1",
+						userpic: "/static/default.jpg",
+						newstime: "2020-05-24 上午 11：31",
+						isFollow: true,
+						title: "这是一个标题",
+						titlepic: "/static/demo/banner2.jpg",
+						support: {
+							type: "",
+							support_count: 0,
+							unsupport_count: 0
 						},
-						{
-							username: "昵称1",
-							userpic: "/static/default.jpg",
-							newstime: "2020-05-24 上午 11：31",
-							isFollow: true,
-							title: "这是一个标题",
-							titlepic: "/static/demo/banner2.jpg",
-							support: {
-								type: "",
-								support_count: 0,
-								unsupport_count: 0
-							},
-							comment_count: 4,
-							share_num: 2
-						}
+						comment_count: 4,
+						share_num: 2
+					}
 				],
-				scrollH:700,
+				scrollH: 700,
 				content: '',
 				tabIndex: 0,
 				isActive: false,
@@ -142,6 +148,25 @@
 				}, {
 
 					name: '话题'
+				}],
+				topicList: [{
+					cover: "/static/demo/topicpic/1.jpeg",
+					title: "话题名称",
+					desc: "话题描述",
+					today_count: 10,
+					news_count: 0
+				}, {
+					cover: "/static/demo/topicpic/1.jpeg",
+					title: "话题名称",
+					desc: "话题描述",
+					today_count: 10,
+					news_count: 0
+				}, {
+					cover: "/static/demo/topicpic/1.jpeg",
+					title: "话题名称",
+					desc: "话题描述",
+					today_count: 10,
+					news_count: 0
 				}]
 			}
 		},
@@ -154,8 +179,10 @@
 			})
 		},
 		methods: {
-			openMore(){
-				console.log(111);
+			openMore() {
+				uni.navigateTo({
+					url:"../../pages/topic-nav/topic-nav"
+				})
 			},
 			onOpenRightEvent() {
 				uni.navigateTo({
@@ -189,17 +216,17 @@
 					title: msg + "成功"
 				})
 			},
-			loadmoreEvent(){
+			loadmoreEvent() {
 				//数据验证
-				if(this.loadMore !=="上拉加载更多..."){
+				if (this.loadMore !== "上拉加载更多...") {
 					return;
 				}
 				this.loadMore = "加载中...";
-				setTimeout(()=>{
-					this.newList = [...this.newList,...this.newList];
+				setTimeout(() => {
+					this.newList = [...this.newList, ...this.newList];
 					this.loadMore = "上拉加载更多...";
-				},2000)
-			},
+				}, 2000)
+			}
 		}
 	}
 </script>

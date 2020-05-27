@@ -104,10 +104,29 @@
             "path" : "components/news/news",
             "style" : {}
         }
+        ,{
+            "path" : "pages/topic-nav/topic-nav",
+            "style" : {
+							"navigationBarTitleText":"话题分类"
+						}
+        }
+        ,{
+            "path" : "pages/topic-detail/topic-detail",
+            "style" : {
+							"app-plus":{
+								"titleNView":{
+									"type":"transparent",
+									"buttons":[{
+										"type":"menu"
+									}]
+								}
+							}
+						}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
+		"navigationBarTitleText": "社区交友",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},
