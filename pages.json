@@ -25,6 +25,7 @@
 						}]
 					}
 				}
+				
 			}
 		},
 		{
@@ -44,9 +45,30 @@
 			}
 		},
 		{
-			"path": "pages/paper/paper",
+			"path": "pages/paper/msg",
 			"style": {
-				"navigationBarTitleText": "首页"
+				"navigationBarTitleText": "消息列表",
+				"enablePullDownRefresh":true,
+				"app-plus":{
+					"titleNView":{
+						"buttons":[{
+							"color": "#333333",
+							"colorPressed": "#FD597C",
+							"float": "left",
+							"fontSize": "40rpx",
+							"fontSrc": "/static/iconfont.ttf",
+							"text": "\ue611"
+						},
+						{
+							"color": "#333333",
+							"colorPressed": "#FD597C",
+							"float": "right",
+							"fontSize": "40rpx",
+							"fontSrc": "/static/iconfont.ttf",
+							"text": "\ue649"
+						}]
+					}
+				}
 			}
 		},
 		{
@@ -100,10 +122,7 @@
             "path" : "components/news/news",
             "style" : {}
         }
-        ,{
-            "path" : "components/news/news",
-            "style" : {}
-        }
+
         ,{
             "path" : "pages/topic-nav/topic-nav",
             "style" : {
@@ -118,6 +137,33 @@
 									"type":"transparent",
 									"buttons":[{
 										"type":"menu"
+									}]
+								}
+							}
+						}
+        }
+        ,{
+            "path" : "pages/user-list/user-list",
+            "style" : {
+							"navigationBarTitleText":"添加好友",
+							"app-plus": {
+								"animationType":"slide-in-left",
+								"titleNView": {
+									"autoBackButton":false,
+									"searchInput": {
+										"align": "center",
+										"backgroundColor": "#F5F4F2",
+										"borderRadius": "4px",
+										"disabled": true,
+										"placeholder": "搜索用户",
+										"placeholderColor": "#6D6C67"
+									},
+									"buttons": [{
+										"color": "#333333",
+										"colorPressed": "#FD597C",
+										"float": "right",
+										"fontSize": "35rpx",
+										"text": "取消"
 									}]
 								}
 							}
@@ -147,7 +193,7 @@
 				"selectedIconPath": "static/tabbar/newsed.png",
 				"text": "动态"
 			}, {
-				"pagePath": "pages/paper/paper",
+				"pagePath": "pages/paper/msg",
 				"iconPath": "static/tabbar/paper.png",
 				"selectedIconPath": "static/tabbar/papered.png",
 				"text": "消息"
