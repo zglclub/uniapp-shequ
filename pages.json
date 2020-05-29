@@ -25,7 +25,7 @@
 						}]
 					}
 				}
-				
+
 			}
 		},
 		{
@@ -48,25 +48,26 @@
 			"path": "pages/paper/msg",
 			"style": {
 				"navigationBarTitleText": "消息列表",
-				"enablePullDownRefresh":true,
-				"app-plus":{
-					"titleNView":{
-						"buttons":[{
-							"color": "#333333",
-							"colorPressed": "#FD597C",
-							"float": "left",
-							"fontSize": "40rpx",
-							"fontSrc": "/static/iconfont.ttf",
-							"text": "\ue611"
-						},
-						{
-							"color": "#333333",
-							"colorPressed": "#FD597C",
-							"float": "right",
-							"fontSize": "40rpx",
-							"fontSrc": "/static/iconfont.ttf",
-							"text": "\ue649"
-						}]
+				"enablePullDownRefresh": true,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+								"color": "#333333",
+								"colorPressed": "#FD597C",
+								"float": "left",
+								"fontSize": "40rpx",
+								"fontSrc": "/static/iconfont.ttf",
+								"text": "\ue611"
+							},
+							{
+								"color": "#333333",
+								"colorPressed": "#FD597C",
+								"float": "right",
+								"fontSize": "40rpx",
+								"fontSrc": "/static/iconfont.ttf",
+								"text": "\ue649"
+							}
+						]
 					}
 				}
 			}
@@ -101,8 +102,8 @@
 					}
 				}
 			}
-		}, 
-{
+		},
+		{
 			"path": "pages/add-input/add-input",
 			"style": {
 				"navigationBarTitleText": "NavBar 导航栏",
@@ -117,59 +118,73 @@
 					}
 				}
 			}
+		}, {
+			"path": "components/news/news",
+			"style": {}
 		}
-	    ,{
-            "path" : "components/news/news",
-            "style" : {}
-        }
 
-        ,{
-            "path" : "pages/topic-nav/topic-nav",
-            "style" : {
-							"navigationBarTitleText":"话题分类"
-						}
-        }
-        ,{
-            "path" : "pages/topic-detail/topic-detail",
-            "style" : {
-							"app-plus":{
-								"titleNView":{
-									"type":"transparent",
-									"buttons":[{
-										"type":"menu"
-									}]
-								}
-							}
-						}
-        }
-        ,{
-            "path" : "pages/user-list/user-list",
-            "style" : {
-							"navigationBarTitleText":"添加好友",
-							"app-plus": {
-								"animationType":"slide-in-left",
-								"titleNView": {
-									"autoBackButton":false,
-									"searchInput": {
-										"align": "center",
-										"backgroundColor": "#F5F4F2",
-										"borderRadius": "4px",
-										"disabled": true,
-										"placeholder": "搜索用户",
-										"placeholderColor": "#6D6C67"
-									},
-									"buttons": [{
-										"color": "#333333",
-										"colorPressed": "#FD597C",
-										"float": "right",
-										"fontSize": "35rpx",
-										"text": "取消"
-									}]
-								}
-							}
-						}
-        }
-    ],
+		, {
+			"path": "pages/topic-nav/topic-nav",
+			"style": {
+				"navigationBarTitleText": "话题分类"
+			}
+		}, {
+			"path": "pages/topic-detail/topic-detail",
+			"style": {
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent",
+						"buttons": [{
+							"type": "menu"
+						}]
+					}
+				}
+			}
+		}, {
+			"path": "pages/user-list/user-list",
+			"style": {
+				"navigationBarTitleText": "添加好友",
+				"app-plus": {
+					"animationType": "slide-in-left",
+					"titleNView": {
+						"autoBackButton": false,
+						"searchInput": {
+							"align": "center",
+							"backgroundColor": "#F5F4F2",
+							"borderRadius": "4px",
+							"disabled": true,
+							"placeholder": "搜索用户",
+							"placeholderColor": "#6D6C67"
+						},
+						"buttons": [{
+							"color": "#333333",
+							"colorPressed": "#FD597C",
+							"float": "right",
+							"fontSize": "35rpx",
+							"text": "取消"
+						}]
+					}
+				}
+			}
+		}, {
+			"path": "pages/user-chat/user-chat",
+			"style": {
+				"navigationBarTitleText": "聊天页面",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [							{
+								"color": "#333333",
+								"colorPressed": "#FD597C",
+								"float": "right",
+								"fontSize": "40rpx",
+								"fontSrc": "/static/iconfont.ttf",
+								"text": "\ue628"
+							}]
+					}
+				}
+			}
+		}
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "社区交友",

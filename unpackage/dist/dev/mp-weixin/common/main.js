@@ -12,8 +12,11 @@ var _App = _interopRequireDefault(__webpack_require__(/*! ./App */ 5));function 
 
 _vue.default.config.productionTip = false;
 // 全局组件注册
-var noThing = function noThing() {__webpack_require__.e(/*! require.ensure | components/no-thing */ "components/no-thing").then((function () {return resolve(__webpack_require__(/*! @/components/no-thing.vue */ 49));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
-_vue.default.component('noThing', noThing);
+var noThing = function noThing() {__webpack_require__.e(/*! require.ensure | components/no-thing */ "components/no-thing").then((function () {return resolve(__webpack_require__(/*! @/components/no-thing.vue */ 81));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
+_vue.default.component('noThing', noThing);var divider = function divider() {__webpack_require__.e(/*! require.ensure | components/divider */ "components/divider").then((function () {return resolve(__webpack_require__(/*! @/components/divider.vue */ 86));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
+
+
+_vue.default.component('divider', divider);
 
 _App.default.mpType = 'app';
 

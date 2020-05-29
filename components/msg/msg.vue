@@ -1,5 +1,5 @@
 <template>
-	<view class="flex align-center p-2 border-bottom border-light-secondary" hover-class="bg-light">
+	<view class="flex align-center p-2 border-bottom border-light-secondary" hover-class="bg-light" @click="open">
 		<image :src="item.avtar" style="width: 80rpx;height: 80rpx;" class="rounded-circle mr-2" mode=""></image>
 		<view class="flex flex-column  flex-1">
 			<view class="flex justify-between align-center">
@@ -28,6 +28,13 @@
 		filters: {
 			formatTime: function(value) {
 				return $T.gettime(value);
+			}
+		},
+		methods:{
+			open(){
+				uni.navigateTo({
+					url:"../../pages/user-chat/user-chat"
+				})
 			}
 		}
 	}

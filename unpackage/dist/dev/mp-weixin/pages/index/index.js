@@ -206,8 +206,7 @@ var demo = [{
     unsupport_count: 0 },
 
   comment_count: 4,
-  share_num: 2 }];var commonList = function commonList() {__webpack_require__.e(/*! require.ensure | components/common/common-list */ "components/common/common-list").then((function () {return resolve(__webpack_require__(/*! @/components/common/common-list.vue */ 54));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var divider = function divider() {__webpack_require__.e(/*! require.ensure | components/divider */ "components/divider").then((function () {return resolve(__webpack_require__(/*! @/components/divider.vue */ 61));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var loadMore = function loadMore() {__webpack_require__.e(/*! require.ensure | components/common/load-more */ "components/common/load-more").then((function () {return resolve(__webpack_require__(/*! @/components/common/load-more.vue */ 66));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
-
+  share_num: 2 }];var commonList = function commonList() {__webpack_require__.e(/*! require.ensure | components/common/common-list */ "components/common/common-list").then((function () {return resolve(__webpack_require__(/*! @/components/common/common-list.vue */ 91));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var loadMore = function loadMore() {__webpack_require__.e(/*! require.ensure | components/common/load-more */ "components/common/load-more").then((function () {return resolve(__webpack_require__(/*! @/components/common/load-more.vue */ 98));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -215,7 +214,6 @@ var demo = [{
 {
   components: {
     commonList: commonList,
-    divider: divider,
     loadMore: loadMore },
 
   data: function data() {
@@ -249,7 +247,7 @@ var demo = [{
     uni.getSystemInfo({
       success: function success(res) {
         _this.scrollH = res.windowHeight - uni.upx2px(100);
-        console.log(_this.scrollH);
+        // console.log(this.scrollH)
       } }),
 
     this.getDate();
@@ -300,7 +298,7 @@ var demo = [{
     },
     follow: function follow(e) {
       this.newList[0].list[e].isFollow = !this.newList[0].list[e].isFollow;
-      if (this.newList[0].list[e].isFollow) {
+      if (!this.newList[0].list[e].isFollow) {
         uni.showToast({
           title: "已取消关注" });
 

@@ -2,7 +2,6 @@
   "navigationBarTitleText": "首页",
   "usingComponents": {
     "common-list": "/components/common/common-list",
-    "divider": "/components/divider",
     "load-more": "/components/common/load-more"
   }
 }

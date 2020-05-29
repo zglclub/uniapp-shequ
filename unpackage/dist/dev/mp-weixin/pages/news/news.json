@@ -1,6 +1,13 @@
 {
-  "navigationBarTitleText": "文章详情页",
+  "navigationBarTitleText": "NavBar 导航栏",
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": false,
   "usingComponents": {
-    "uni-nav-bar": "/components/uni-ui/uni-nav-bar/uni-nav-bar"
+    "uni-nav-bar": "/components/uni-ui/uni-nav-bar/uni-nav-bar",
+    "common-list": "/components/common/common-list",
+    "load-more": "/components/common/load-more",
+    "uni-search-bar": "/components/uni-ui/uni-search-bar/uni-search-bar",
+    "hot-cate": "/components/news/hot-cate",
+    "topic-list": "/components/news/topic-list"
   }
 }

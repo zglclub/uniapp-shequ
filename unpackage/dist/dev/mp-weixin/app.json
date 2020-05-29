@@ -2,15 +2,20 @@
   "pages": [
     "pages/index/index",
     "pages/news/news",
-    "pages/paper/paper",
+    "pages/paper/msg",
     "pages/home/home",
     "pages/search/search",
-    "pages/add-input/add-input"
+    "pages/add-input/add-input",
+    "components/news/news",
+    "pages/topic-nav/topic-nav",
+    "pages/topic-detail/topic-detail",
+    "pages/user-list/user-list",
+    "pages/user-chat/user-chat"
   ],
   "subPackages": [],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "uni-app",
+    "navigationBarTitleText": "社区交友",
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
   },
@@ -30,10 +35,10 @@
         "pagePath": "pages/news/news",
         "iconPath": "static/tabbar/news.png",
         "selectedIconPath": "static/tabbar/newsed.png",
-        "text": "资讯"
+        "text": "动态"
       },
       {
-        "pagePath": "pages/paper/paper",
+        "pagePath": "pages/paper/msg",
         "iconPath": "static/tabbar/paper.png",
         "selectedIconPath": "static/tabbar/papered.png",
         "text": "消息"
@@ -47,6 +52,7 @@
     ]
   },
   "usingComponents": {
-    "no-thing": "/components/no-thing"
+    "no-thing": "/components/no-thing",
+    "divider": "/components/divider"
   }
 }
